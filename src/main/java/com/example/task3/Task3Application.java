@@ -22,6 +22,8 @@ public class Task3Application {
         return new CommandLineRunner() {
             @Override
             public void run(String... args) throws Exception {
+                loginUserService.clear();
+                postingService.clear();
                 ReadCsv readCsv = new ReadCsv();
                 readCsv.getLoginsFromCsv().forEach(x -> loginUserService.saveLoginUser(x));
                 readCsv.getPostingsFromCsv().forEach(x -> postingService.savePosting(x));

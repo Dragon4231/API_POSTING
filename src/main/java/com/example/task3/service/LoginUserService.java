@@ -20,4 +20,8 @@ public class LoginUserService {
         loginUserRepository.save(loginUser);
     }
 
+    public void clear(){
+        loginUserRepository.deleteAll();
+    }
+
 }

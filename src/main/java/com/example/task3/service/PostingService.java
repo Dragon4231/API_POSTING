@@ -88,4 +88,8 @@ public class PostingService {
                 })
                 .collect(Collectors.toList());
     }
+
+    public void clear(){
+        postingRepository.deleteAll();
+    }
 }
